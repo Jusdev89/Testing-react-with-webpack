@@ -4,6 +4,6 @@ import React from 'react'
 import todoList from '../data/list'
 
 ReactDom.render(
-  <App itemList={todoList}/>,
+  <App todoList={todoList}/>,
   document.getElementById('root')
 )
