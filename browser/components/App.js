@@ -3,7 +3,6 @@ import ListItem from './ListItem'
 
 export default class App extends Component {
   listTodoItem() {
-    console.log('Propr type', this.props)
     return this.props.todoList.map((todo, index) =>
       <ListItem key={index} item={todo} />
     )
