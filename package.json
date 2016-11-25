@@ -33,7 +33,7 @@
   },
   "scripts": {
     "server": "webpack-dev-server --progress --colors",
-    "test": "mocha --compilers js:babel-core/register --timeout 10000"
+    "test": "mocha --require ./test/setup.js --recursive ./test/components.js --compilers js:babel-core/register --timeout 10000"
   },
   "author": "JusDev89",
   "license": "MIT"
