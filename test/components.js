@@ -7,7 +7,7 @@ import {todoList, newTodoList} from '../data/list'
 
 describe('Testing React components', () => {
   describe('<App />', () => {
-    it('test setting props', () => {
+    it('tests setting props', () => {
       const wrapper = mount(<App todoList={todoList} />)
       expect(wrapper.props().todoList).to.eql(todoList)
       wrapper.setProps({todoList: newTodoList})
@@ -18,7 +18,7 @@ describe('Testing React components', () => {
     it('simulate a click event', () => {
       const wrapper = mount(<ListItem item={newTodoList[0]} />)
       wrapper.find('button').simulate('click')
-      expect()
+      expect(wrapper.state().item).to.eql('New Text')
     })
   })
 })
