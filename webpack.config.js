@@ -23,7 +23,11 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.css$/, loader: 'style!css'},
-      {test:/\.js$/, include: `${rootDir}/browser`, loader: 'babel-loader'}
+      {
+        test:/\.js$/,
+        include: `${rootDir}/browser`,
+        loader: 'babel-loader'
+      }
     ]
   },
   output: {
