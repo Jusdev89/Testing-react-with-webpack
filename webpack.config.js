@@ -20,11 +20,18 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
   entry: [`./browser/render.js`],
+  devServer: {
+    hot: true,
+    inline: true,
+    port: 8080,
+    historyApiFallback: true,
+  },
   module: {
     loaders: [
       {test: /\.css$/, loader: 'style!css'},
       {
         test:/\.js$/,
+        exclude: /(node_modules)/,
         include: `${rootDir}/browser`,
         loader: 'babel-loader'
       }

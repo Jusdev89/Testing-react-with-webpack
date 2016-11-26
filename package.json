@@ -32,7 +32,7 @@
     "webpack": "^1.13.3"
   },
   "scripts": {
-    "server": "webpack-dev-server --progress --colors",
+    "server": "webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./",
     "test": "mocha --require ./test/setup.js --recursive ./test/components.js --compilers js:babel-core/register --timeout 10000"
   },
   "author": "JusDev89",
